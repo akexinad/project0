@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid limegreen
+}
+
+body {
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.game-box {
+  margin: 0 auto;
+  width: 610px;
+}
+
+.box-row {
+  margin: 0 auto;
+  /* display: block; */
+}
+
+.box {
+  display: inline-block;
+  margin: 0 0 0 0;
+  border: 4px solid black;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  display: inline-block;
+  background-size: contain;
+}
+
+
+.naught {
+  background-image: url("../img/circle.png");
+  background-size: contain;
+}
+
+.cross {
+  background-image: url("../img/cross.jpg"); */
+  background-size: contain;
+}
