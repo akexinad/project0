@@ -1,4 +1,5 @@
 const render = function () {
+  // checks who has played round in question and adds css class that holds respective player's image.
   for (let i = 0; i < ticTacToe.board.length; i++) {
     // $(`#${ i }`).text( ticTacToe.board[i] );
     if (ticTacToe.board[i] === 'x') {
@@ -8,6 +9,7 @@ const render = function () {
     }
   }
 
+  // executes checkWinner() for win or draw and reveals resepective div that highlights game winner.
   if (ticTacToe.drawCounter === "draw") {
     $('.draw-box').css("visibility", "visible").hide().fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
     return;
@@ -35,6 +37,7 @@ $(document).ready(function () {
     ticTacToe.switchPlayer(ticTacToe.player);
   });
 
+  // removes the moves made on the board and resets point scores
   $('.reset-button').on('click', function () {
     ticTacToe.resetGame();
     $('.box').removeClass('x').removeClass('o').text('');
@@ -45,6 +48,7 @@ $(document).ready(function () {
     $('.o-points').text('O: 0');
   });
 
+  // removes the moves made on the board but keeps point scores
   $('.play-again-button').on('click', function () {
     ticTacToe.playAgain();
     $('.box').removeClass('x').removeClass('o').text('');

@@ -25,3 +25,7 @@ The vast majority my problems were purely concerned with the fact of my novice s
 My biggest challenge was getting the checkWinner function to execute the correct outcome when all but one id were taken. On the last move when X would the chance to win, instead of displaying the 'X wins box'. The checkWinner would log a 'draw', however, the x-point counter would still increase by one. So to counter this I moved the ```if (drawCounter === 9)``` argument to the bottom of checkWinner(). However, this produced the same defect but inversely. That is, when it was actually a draw the display would show that X had won the game.
 
 My instructor came to the conclusion that the issue lay in the fact that, regardless of O winning, X winning, or a draw, the return values were all identical. Thus, the solution was to differentiate the return value for 'draw' in order make a more succinct distinction. We added an extra line to return value of ```if (drawCounter === 9)``` which was ```this.drawCounter = 'draw'``` then the argument would return true. This seems to have fixed the error entirely after copious hours of freaking the fuck out.
+
+### Unsolved Problems
+
+Never got the chance to attempt the AI or most of the bonus functionality.
