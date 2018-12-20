@@ -92,7 +92,7 @@ h1 {
 
 .result {
   text-align: center;
-  color: green;
+  color: red;
   font-family: 'Ubuntu Mono', monospace;
   margin: 0 auto;
   font-size: 800%;

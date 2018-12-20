@@ -12,4 +12,6 @@ The entire logic of the game is contained within an object called ticTacToe. It 
 
 The game logic begins the execution of the playerMoves() function. The argument that it takes corresponds to the id of an html div where the game is to be played via jQuery.
 
-This function then passes on to another called the checkWinner() function and first checks for all possible winning combinations on the board array. If it is still to early to declare a win, the function returns false, adds one to the drawCounter and adds the player symbol on the board index corresponding to the id the player has chosen.
+The playerMoves function then passes on to another called the checkWinner() function and first checks for all possible winning combinations on the board array. If it is still to early to declare a win, the function returns false, adds one to the drawCounter and adds the player symbol on the board index corresponding to the id the player has chosen. It then calls the switchPlayer function which switches the player variable from 'x' to 'o'.
+
+These steps are repeated until a player either chooses the winning combinations, which will return true in the checkWinner function. If all id's have been chosen and no combinations match it returns a draw, and the logic resets. 
