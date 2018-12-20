@@ -1,55 +1,15 @@
-# Tic Tac Toe
+A readme.md file with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
 
-## Coming Soon
+# TIC TAC TOE
 
-## Paragraphs
+## Methodology
+The entire logic of the game is contained within an object called ticTacToe. It begins with the following parameters:
 
-no mark up needed
+- Player x as the default player 1, switching between the two players using an if else statement in the ticTacToe.switchPlayer() function.
+- An array consisting of 8 items of null as the starting board. The array index corresponds to the html id's of the div's whose class is 'box'. The null items are replaced with either an X or an O via the playerMoves() function.
+- Two counters, xWinCounter and oWinCounter, for X and O wins.
+- One counter for a draw, the drawCounter. Within the playerMoves() function, the counter counts how many items in the board array have been replaced with either an X or an O. If all items have been replaced and a win has not been decided, then a draw is called.
 
-just new lines
+The game logic begins the execution of the playerMoves() function. The argument that it takes corresponds to the id of an html div where the game is to be played via jQuery.
 
-> These are quotes
-
-Within a paragraph we can *emphasise* certain words
-
-we can **bold** them. Alternatively: _this_ or __this__.
-
-or ***this***
-
-## lists
-
-- benigni
-- fellini
-- pieraccioni
-
-### like this
-
-* patek
-* lange
-* george daniels
-
-### or like this
-
-1. first
-2. second
-3. third
-
-## links
-we can create [links](http://github.com)
-
-## live Demo
-[Click here](http://akexinad.github.io/project0) for the live site.
-
-## images
-![A picture of Bill Murray](http://fillmurray.com/50/50)
-
-## code
-
-you can markdown a specific liek so: please do not use `<marquee>` `const func = function ()`
-
-```javascript
-console.log('this is for multiple lines of code');
-if (true) {
-  const x = y
-};
-```
+This function then passes on to another called the checkWinner() function and first checks for all possible winning combinations on the board array. If it is still to early to declare a win, the function returns false, adds one to the drawCounter and adds the player symbol on the board index corresponding to the id the player has chosen.

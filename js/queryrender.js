@@ -1,7 +1,12 @@
 const render = function () {
   for (let i = 0; i < ticTacToe.board.length; i++) {
-    $(`#${ i }`).text( ticTacToe.board[i] );
-  };
+    // $(`#${ i }`).text( ticTacToe.board[i] );
+    if (ticTacToe.board[i] === 'x') {
+      $(`#${ i }`).addClass('x');
+    } else if (ticTacToe.board[i] === 'o') {
+      $(`#${ i }`).addClass('o');
+    }
+  }
 
   if (ticTacToe.drawCounter === "draw") {
     $('.draw-box').css("visibility", "visible").hide().fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
@@ -32,7 +37,7 @@ $(document).ready(function () {
 
   $('.reset-button').on('click', function () {
     ticTacToe.resetGame();
-    $('.box').text('');
+    $('.box').removeClass('x').removeClass('o').text('');
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');
@@ -42,10 +47,10 @@ $(document).ready(function () {
 
   $('.play-again-button').on('click', function () {
     ticTacToe.playAgain();
-    $('.box').text('');
+    $('.box').removeClass('x').removeClass('o').text('');
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');
-  })
+  });
 
 });

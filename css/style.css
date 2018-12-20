@@ -5,7 +5,6 @@
   /* border: 1px solid limegreen; */
 }
 
-
 .heading-box {
   margin-left: auto;
   margin-right: auto;
@@ -43,7 +42,7 @@ h1 {
 .box {
   display: inline-block;
   margin: 4px 0 0 0;
-  background-color: yellow;
+  background-color: orange;
   border-radius: 25px;
   width: 200px;
   height: 200px;
@@ -54,15 +53,15 @@ h1 {
   color: purple;
 }
 
-/* .naught {
-  background-image: url("../img/circle.png");
+.o {
+  background-image: url('../img/bean.jpg');
   background-size: contain;
 }
 
-.cross {
-  background-image: url("../img/cross.jpg");
+.x {
+  background-image: url('../img/benigni.png');
   background-size: contain;
-} */
+}
 
 .x-box {
   position: absolute;
@@ -72,7 +71,6 @@ h1 {
   right: 8px;
   padding: 176px 63px 166px 94px;
 }
-
 
 .o-box {
   position: absolute;
@@ -130,9 +128,10 @@ h1 {
 
 .point-box {
   /* display: inline block; */
+  margin: 0 auto;
   width: 150px;
   top: 1px;
-  margin: 0 0 0 430px;
+  /* margin: 0 0 0 430px; */
 }
 
 .x-points {
@@ -140,7 +139,6 @@ h1 {
   color: white;
   font-size: 300%;
 }
-
 
 .o-points {
   font-family: 'Source Code Pro', monospace;
