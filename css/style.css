@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid limegreen;
+  /* border: 1px solid limegreen; */
 }
 
 
@@ -12,7 +12,7 @@
   padding: 1px 0 1px 0;
   margin: 30px 0 50px 0;
   border-radius: 50px;
-  background-color: rgb(106, 167, 28)
+  background-color: limegreen;
 }
 
 h1 {
@@ -43,15 +43,15 @@ h1 {
 .box {
   display: inline-block;
   margin: 4px 0 0 0;
-  background-color: #4b0082;
+  background-color: yellow;
   border-radius: 25px;
   width: 200px;
   height: 200px;
   vertical-align: top;
   text-align: center;
-  font-size: 900%;
+  font-size: 1100%;
   font-family: 'Ubuntu Mono', monospace;
-  color: rgb(113, 255, 186);
+  color: purple;
 }
 
 /* .naught {
@@ -94,25 +94,38 @@ h1 {
 
 .result {
   text-align: center;
-  color: #d40000;
+  color: green;
   font-family: 'Ubuntu Mono', monospace;
   margin: 0 auto;
   font-size: 800%;
 }
 
 .button-box {
-  padding: 60px 0 0 230px;
+  padding: 40px 0px 0px 160px;
 }
 
 .reset-button {
-  margin: 0 auto;
-  align-items: center;
+  margin: 0 0 0 30px;
+  display: inline-block;
+  background-color: rgb(227, 0, 255);
   border-radius: 30px;
   font-family: 'Source Code Pro', monospace;
   text-align: center;
-  font-size: 150%;
+  font-size: 130%;
   width: 150px;
-  height: 70px;
+  height: 50px;
+}
+
+.play-again-button {
+  margin: 0 20px 0 -30px;
+  display: inline-block;
+  background-color: rgb(227, 0, 255);
+  border-radius: 30px;
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  font-size: 130%;
+  width: 150px;
+  height: 50px;
 }
 
 .point-box {
@@ -124,11 +137,13 @@ h1 {
 
 .x-points {
   font-family: 'Source Code Pro', monospace;
-  font-size: 200%;
+  color: white;
+  font-size: 300%;
 }
 
 
 .o-points {
   font-family: 'Source Code Pro', monospace;
-  font-size: 200%;
+  color: white;
+  font-size: 300%;
 }

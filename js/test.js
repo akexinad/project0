@@ -60,6 +60,14 @@ const ticTacToe = {
     this.player = 'x';
     this.board = ['', '', '', '', '', '', '', '', ''];
     this.drawCounter = 0;
+    this.xWinCounter = 0;
+    this.oWinCounter = 0;
+  },
+
+  playAgain: function () {
+    this.player = 'x';
+    this.board = ['', '', '', '', '', '', '', '', ''];
+    this.drawCounter = 0;
   },
 
   winCounter: function () {

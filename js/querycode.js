@@ -4,14 +4,14 @@ const render = function () {
   };
 
   if (ticTacToe.drawCounter === "draw") {
-    $('.draw-box').css("visibility", "visible");
+    $('.draw-box').css("visibility", "visible").hide().fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
     return;
   } else if (ticTacToe.checkWinner(ticTacToe.player) && ticTacToe.player === 'x') {
-    $('.x-box').css("visibility", "visible");
+    $('.x-box').css("visibility", "visible").hide().fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
     $('.x-points').html(`X: ${ ticTacToe.xWinCounter }`);
     return;
   } else if (ticTacToe.checkWinner(ticTacToe.player) && ticTacToe.player === 'o') {
-    $('.o-box').css("visibility", "visible");
+    $('.o-box').css("visibility", "visible").hide().fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
     $('.o-points').html(`O: ${ ticTacToe.oWinCounter }`);
     return;
   };
@@ -36,6 +36,16 @@ $(document).ready(function () {
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');
+    $('.x-points').text('X: 0');
+    $('.o-points').text('O: 0');
   });
+
+  $('.play-again-button').on('click', function () {
+    ticTacToe.playAgain();
+    $('.box').text('');
+    $('.x-box').css('visibility', 'hidden');
+    $('.o-box').css('visibility', 'hidden');
+    $('.draw-box').css('visibility', 'hidden');
+  })
 
 });
