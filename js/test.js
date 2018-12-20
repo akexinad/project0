@@ -9,11 +9,11 @@ const ticTacToe = {
 
   board: ['', '', '', '', '', '', '', '', ''],
 
-  drawCounter: 0,
-
   xWinCounter: 0,
 
   oWinCounter: 0,
+
+  drawCounter: 0,
 
   playerMoves: function (id) {
     if (this.board[id] !== '') {
@@ -34,9 +34,6 @@ const ticTacToe = {
   },
 
   checkWinner: function (player) {
-    if (this.drawCounter === 9) {
-      return true;
-    }
     if (this.board[0] === player && this.board[1] === player && this.board[2] === player) {
       return true;
     } else if (this.board[3] === player && this.board[4] === player && this.board[5] === player) {
@@ -53,6 +50,9 @@ const ticTacToe = {
       return true;
     } else if (this.board[2] === player && this.board[4] === player && this.board[6] === player) {
       return true;
+    } else if (this.drawCounter === 9) {
+      this.drawCounter = "draw";
+      return true;
     }
   },
 
@@ -62,14 +62,14 @@ const ticTacToe = {
     this.drawCounter = 0;
   },
 
-  whoWinning: function () {
-    if (this.checkWinner(this.player) && this.player === 'x') {
-      this.xWinCounter ++;
-      console.log('x points: ', this.xWinCounter);
-    } else if (this.checkWinner(this.player) && this.player === 'o') {
-      this.oWinCounter ++;
-      console.log('o points: ', this.oWinCounter);
-    }
-  }
+  winCounter: function () {
+    if (ticTacToe.drawCounter === "draw") {
+      return;
+    } else if (ticTacToe.checkWinner(ticTacToe.player) && ticTacToe.player === 'x') {
+      return this.xWinCounter ++;
+    } else if (ticTacToe.checkWinner(ticTacToe.player) && ticTacToe.player === 'o') {
+      return this.oWinCounter ++;
+    };
+  },
 
 };

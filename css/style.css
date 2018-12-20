@@ -30,6 +30,7 @@ h1 {
 }
 
 .game-box {
+  /* display: inline-block; */
   position: relative;
   margin: 0 auto;
   width: 610px;
@@ -112,4 +113,22 @@ h1 {
   font-size: 150%;
   width: 150px;
   height: 70px;
+}
+
+.point-box {
+  /* display: inline block; */
+  width: 150px;
+  top: 1px;
+  margin: 0 0 0 430px;
+}
+
+.x-points {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 200%;
+}
+
+
+.o-points {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 200%;
 }
