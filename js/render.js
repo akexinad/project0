@@ -3,9 +3,9 @@ const render = function () {
   for (let i = 0; i < ticTacToe.board.length; i++) {
     // $(`#${ i }`).text( ticTacToe.board[i] );
     if (ticTacToe.board[i] === 'x') {
-      $(`#${ i }`).addClass('x');
+      $(`#${ i }`).html('X');
     } else if (ticTacToe.board[i] === 'o') {
-      $(`#${ i }`).addClass('o');
+      $(`#${ i }`).html('O');
     }
   }
 
@@ -40,18 +40,18 @@ $(document).ready(function () {
   // removes the moves made on the board and resets point scores
   $('.reset-button').on('click', function () {
     ticTacToe.resetGame();
-    $('.box').removeClass('x').removeClass('o').text('');
+    $('.box').removeClass('x-image').removeClass('o-image').text('');
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');
-    $('.x-points').text('X: 0');
-    $('.o-points').text('O: 0');
+    $('.x-points').text('X : 0');
+    $('.o-points').text('O : 0');
   });
 
   // removes the moves made on the board but keeps point scores
   $('.play-again-button').on('click', function () {
     ticTacToe.playAgain();
-    $('.box').removeClass('x').removeClass('o').text('');
+    $('.box').removeClass('x-image').removeClass('o-image').text('');
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');

@@ -6,24 +6,17 @@
 }
 
 .heading-box {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1px 0 1px 0;
-  margin: 30px 0 50px 0;
-  border-radius: 50px;
-  background-color: limegreen;
 }
 
 h1 {
   text-align: center;
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 400%;
+  font-family: monospace;
+  font-size: 5em;
 }
 
 .container {
   max-width: 960px;
   padding: 50px 0 80px 0;
-  background-color: rgb(134, 134, 134);
   border-radius: 50px;
   margin: 0 auto;
 }
@@ -42,25 +35,14 @@ h1 {
 .box {
   display: inline-block;
   margin: 4px 0 0 0;
-  background-color: orange;
-  border-radius: 25px;
+  background-color: #d4d2d2;
   width: 200px;
   height: 200px;
   vertical-align: top;
   text-align: center;
   font-size: 1100%;
-  font-family: 'Ubuntu Mono', monospace;
-  color: purple;
-}
-
-.o {
-  background-image: url('../img/bean.jpg');
-  background-size: contain;
-}
-
-.x {
-  background-image: url('../img/benigni.png');
-  background-size: contain;
+  font-family: monospace;
+  color: black;
 }
 
 .x-box {
@@ -93,7 +75,7 @@ h1 {
 .result {
   text-align: center;
   color: red;
-  font-family: 'Ubuntu Mono', monospace;
+  font-famimonospace;
   margin: 0 auto;
   font-size: 800%;
 }
@@ -105,9 +87,10 @@ h1 {
 .reset-button {
   margin: 0 0 0 30px;
   display: inline-block;
-  background-color: rgb(227, 0, 255);
-  border-radius: 30px;
-  font-family: 'Source Code Pro', monospace;
+  border-radius: 0.5em;
+  border: 2px solid black;
+  font-family: monospace;
+  font-weight: bold;
   text-align: center;
   font-size: 130%;
   width: 150px;
@@ -117,9 +100,10 @@ h1 {
 .play-again-button {
   margin: 0 20px 0 -30px;
   display: inline-block;
-  background-color: rgb(227, 0, 255);
-  border-radius: 30px;
-  font-family: 'Source Code Pro', monospace;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  font-family: monospace;
+  font-weight: bold;
   text-align: center;
   font-size: 130%;
   width: 150px;
@@ -127,21 +111,19 @@ h1 {
 }
 
 .point-box {
-  /* display: inline block; */
   margin: 0 auto;
   width: 150px;
   top: 1px;
-  /* margin: 0 0 0 430px; */
 }
 
 .x-points {
-  font-family: 'Source Code Pro', monospace;
-  color: white;
+  font-family: monospace;
+  color: blue;
   font-size: 300%;
 }
 
 .o-points {
-  font-family: 'Source Code Pro', monospace;
-  color: white;
+  font-family: monospace;
+  color: blue;
   font-size: 300%;
 }

@@ -69,6 +69,8 @@ const ticTacToe = {
     this.drawCounter = 0;
   },
 
+  
+
   // executes checkWinner() to check win or draw and adds point to respective player.
   winCounter: function () {
     if (ticTacToe.drawCounter === "draw") {
