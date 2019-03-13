@@ -44,8 +44,8 @@ $(document).ready(function () {
     $('.x-box').css('visibility', 'hidden');
     $('.o-box').css('visibility', 'hidden');
     $('.draw-box').css('visibility', 'hidden');
-    $('.x-points').text('X : 0');
-    $('.o-points').text('O : 0');
+    $('.x-points').text('X: 0');
+    $('.o-points').text('O: 0');
   });
 
   // removes the moves made on the board but keeps point scores
